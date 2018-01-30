@@ -5,7 +5,7 @@ import { notEmpty } from '@ember/object/computed';
 
 const Note = EmberObject.extend({
   alertVisible:notEmpty('info'),
-  content:'Veuillez saisir des caractères',
+  //content:'Veuillez saisir des caractères',
   MAX:100,
   size:computed('content', function() {
     let content = this.get('content');
@@ -32,7 +32,7 @@ export default Route.extend({
   model(){
     return Note.create({
       MAX: 100,
-      content: 'Ah !',
+      content: '',
     });
   },
   actions:{
