@@ -24,3 +24,7 @@
     {{multi-select elements = model.includedItems selectedIds = model.selectedIncludedItemsIds}}
   </div>
 </div>
+
+{{#each model.includedItems as |model|}}
+  <img src="{{model.image}}"/>
+{{/each}}
