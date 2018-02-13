@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col">
+    {{multi-select elements = model.dispoItems selectedIds = model.selectedDispoItemsIds}}
+  </div>
+  <div class="col-1">
+    <button {{action "addTo" model.dispoItems model.includedItems model.selectedDispoItems}}
+      class="btn btn-primary">{{fa-icon "step-forward"}}
+    </button>
+
+    <button {{action "addTo" model.dispoItems model.includedItems model.dispoItems}}
+      class="btn btn-primary btn-block">{{fa-icon "step-forward"}}
+    </button>
+  </div>
+  <div class="col">
+    {{multi-select elements = model.includedItems selectedIds = model.selectedIncludedItemsIds}}
+  </div>
+</div>
