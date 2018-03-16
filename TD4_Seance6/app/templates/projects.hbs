@@ -1,0 +1,22 @@
+<h2 class="ui header">Projects</h2>
+{{#link-to "projects.new" class="ui button orange"}}Add new project{{/link-to}}
+
+<br/>
+
+<table class="ui single line table">
+  <tr bgcolor="#d3d3d3">
+    <td>Name</td>
+    <td>Descriptif</td>
+    <td>StartDate</td>
+    <td>DueDate</td>
+  </tr>
+  {{#each model as |proj|}}
+    <tr>
+      <td>{{proj.name}}</td>
+      <td>{{proj.descriptif}}</td>
+      <td>{{proj.startDate}}</td>
+      <td>{{proj.dueDate}}</td>
+    </tr>
+  {{/each}}
+</table>
+{{outlet}}
