@@ -1,1 +1,31 @@
 {{outlet}}
+<form class="ui form" name="project_creation">
+
+  <label for="name">Name : </label><br/>
+  <input type="text" name="name" id="name"/>
+  <br/>
+
+  <label for="descriptif">Descriptif : </label><br/>
+  <textarea name="descriptif" id="descriptif" cols="20" rows="12"></textarea>
+  <br/>
+
+  <label for="startDate">Start Date : </label><br/>
+  <input type="text" name="startDate" id="startDate"/>
+
+  <label for="dueDate">Due Date : </label><br/>
+  <input type="text" name="dueDate" id="dueDate"/>
+  <br/>
+
+  <label for="owner">Owner : </label><br/>
+  <input type="text" name="owner" id="owner"/>
+  <br/>
+
+  <button class="btn btn primary" {{action "insertion" model}}>
+    Valider
+  </button>
+
+  <button class="ui button">Cancel</button><br/>
+
+
+
+</form>
