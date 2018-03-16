@@ -8,7 +8,7 @@ export default Route.extend({
   actions:{
     save(dev){
       debugger
-      dev = this.get('store').createRecord('developer', JSON.parse(JSON.stringify(dev)));
+      dev = this.get('store').createRecord('developers', JSON.parse(JSON.stringify(dev)));
       dev.save().then(() => {
         this.transitionTo('developers');
       });
