@@ -27,6 +27,11 @@ Router.map(function() {
     this.route('delete',{ path: 'delete/:tag_id' });
     this.route('update',{ path: 'update/:tag_id' });
   });
+  this.route('tasks', function(){
+    this.route('new');
+    this.route('delete',{ path: 'delete/:task_id' });
+    this.route('update',{ path: 'update/:task_id' });
+  });
   this.route('stories', function(){
     //this.route('new');
   });
