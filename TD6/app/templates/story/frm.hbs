@@ -1,0 +1,11 @@
+{{#ui-form newValue=model.oldStory  oldValue=model.newStory validation="save" cancel="cancel" bigIcon='table' isNew=model.isNew header=model.project.name description='Adding a stories in project'}}
+  <div class="field">
+    <label for="code">Code</label>
+    {{input id="code" placeholder="Code" value=model.newStory.code}}
+  </div>
+  <div class="field">
+    <label for="description">Description</label>
+    {{textarea id="description" placeholder="Description" value=model.newStory.description}}
+  </div>
+{{/ui-form}}
+{{outlet}}

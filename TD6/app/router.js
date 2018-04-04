@@ -21,8 +21,8 @@ Router.map(function() {
 
   this.route('story', function() {
     this.route('new', {path: 'new/:project_id'});
-    this.route('delete',{ path: 'delete/:task_id' });
-    this.route('update',{ path: 'update/:task_id' });
+    this.route('delete',{ path: 'delete/:story_id' });
+    this.route('update',{ path: 'update/:project_id/:story_id' });
   });
   this.route('tags', function(){
     this.route('new');
