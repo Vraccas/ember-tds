@@ -7,9 +7,9 @@
       </div>
     </div>
     <div class="field">
-        <label id="" class="" for="frmEdit-color">Color</label>
-      <div id="div-frmEdit-color" class="ui input">
-        {{input id="frmEdit-color" value=model.color placeholder="Choose color"}}
+      <label id="" class="" for="frmEdit-color">Color</label>
+      <div id="div-frmEdit-color">
+        {{multi-select name="color" selected=model.color placeholder="Color" elements=model.colors selectedElements=model.color}}
       </div>
     </div>
   {{/ui-form}}
