@@ -6,5 +6,11 @@
         {{input id="frmEdit-title" value=model.data.title placeholder="Title"}}
       </div>
     </div>
+    <div class="field">
+      <label id="" class="" for="frmEdit-color">Color</label>
+      <div id="div-frmEdit-color">
+        {{multi-select name="color" selected=model.data.color placeholder="Color" elements=model.colors}}
+      </div>
+    </div>
   {{/ui-form}}
 </div>{{outlet}}
