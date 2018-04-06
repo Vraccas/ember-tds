@@ -2,29 +2,34 @@
 
 <!-- TODO : Mettre une majuscule à la première lettre des modèles -->
 <div class="ui grid">
-  {{#each model.models as |tables| }}
+  {{#each model.models as |tables index| }}
     <div class="eight wide column">
-      <div class="ui message icon">
-        <i class="icons big">
-          <i class="icon user"></i>
-        </i>
-        <div class="content">
+      <div class="item">
+        <div class="ui message icon">
+          <i class="icons big">
+            <i class="icon {{get model.icons index}}"></i>
+          </i>
+          <div class="content">
             {{tables.objects.length}} items
-          <div class="header">
-            {{tables.name}}
+            <div class="header">
+              {{tables.name}}
+            </div>
+          </div>
+          <div class="extra">
+            <span class="see">
+              <a href="{{pluralize tables.name}}" class="ui button">See all</a>
+            </span>
+            <span class="new">
+              <a href="{{pluralize tables.name}}/new" class="ui button">Add new</a>
+            </span>
           </div>
         </div>
-        {{tables.index}}
+
+        <hr/>
       </div>
-      <hr/>
     </div>
   {{/each}}
 
 </div>
-
-{{#each model.icons as |icon| }}
-  {{icon}}
-  <br/>
-{{/each}}
 
 {{outlet}}

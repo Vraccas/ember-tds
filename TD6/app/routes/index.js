@@ -9,7 +9,8 @@ export default Route.extend({
       models: getOwner(this).lookup('data-adapter:main').getModelTypes().map(type => {
         return {name: type.name,objects:this.get('store').findAll(type.name)};
       }),
-      icons: ['user','table','address card outline','tasks','step forward','tag']
+      icons: ['user','table','step forward','address card outline','tag','tasks']
     });
-  }
+
+  },
 });
