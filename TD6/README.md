@@ -1,51 +1,12 @@
-# boards-app
+boards-app
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ce projet a constitué une bonne initiation à Ember, même si je ne pense pas avoir encore saisi toutes les subtilités du framework
+This project was a good introduction to Ember, althought I don't really master it yet
 
-## Prerequisites
+Liste non-exhaustive des choses qui me gênent dans l'application que je rends :
+		 - Un manque de factorisation du code, avec des fichiers new.hbs et update.hbs qui sont pratiquement identiques pour plusieurs entités. J'aurais préféré faire ce qui a été fait avec les 		projets, c'est-à-dire un unique fichier frm.hbs regroupant toutes les fonctionnalités.
 
-You will need the following things properly installed on your computer.
+		 - Le drag-and-drop pour les stories qui n'a pas été implanté. Je ne l'ai pas fait par manque de temps. J'ai été, sur les derniers jours, bloqué longtemps sur certaines petites erreurs. Cela a été d'autant plus difficile de les trouver qu'elles sont arrivés à un moment où j'avais mal géré mon git, et donc où tout retour en arrière aurait été risqué.
+ 		- La gestion des dépendances entre modèles. Nous avons appris qu'en mongoDB, contrairement aux SGBD relationnels, les documents entiers sont copiés dans les documents auxquels ils 	appartiennent, et non pas seulement leur clé primaire. Le fait que ce soit l'id qui soit référencée à chaque fois m'a un peu perturbé. J'aurais préféré travailler avec une base MySQL.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd boards-app`
-* `npm install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+		- Le lien vers les stories dans l'index qui ne fonctionne pas. Là encore, je n'ai pas traité le cas particulier par manque de temps. J'ai été étonné que, dans le sujet, il soit indiqué qu'il 	faille un lien pour créer une nouvelle story. En effet, à mon sens, une story ne peut être créée qu'à l'intérieur d'un projet.
