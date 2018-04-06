@@ -29,6 +29,8 @@ export default Route.extend({
       let dev = Ember.get(model, 'developers').find(dev => dev.id == idDeveloper);
       story.set('developer', dev);
 
+
+
       let idTags=Ember.get(model,'idTags');
       let tags=Ember.get(model,'tags').filter((item, index, self) => idTags.includes(item.id));
       story.set('tags',tags);

@@ -1,1 +1,20 @@
-Je suis le dashboard
+<h2 class="ui header">
+  <i class="calendar alternate icon"></i>
+  <div class="content">
+    Dashboard
+    <div class="sub header">Progress of the project stories</div>
+  </div>
+</h2>
+
+{{#each model.steps as |step|}}
+  <div class="ui header"><i class="step forward icon"></i> {{step.title}}</div>
+  <div class="ui attached segment">
+    {{#each model.project.stories as |story|}}
+      {{#if (eq story.step.title step.title)}}
+        {{story.code}} : {{ story.description }}
+      {{/if}}
+    {{/each}}
+  </div>
+{{/each}}
+
+{{outlet}}
