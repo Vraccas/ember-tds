@@ -18,6 +18,7 @@ Router.map(function() {
     this.route('delete',{ path: 'delete/:developer_id' });
   });
   this.route('project',{ path: 'project/:project_id' });
+  this.route('project.board',{ path: 'project/:project_id/board' });
 
   this.route('story', function() {
     this.route('new', {path: 'new/:project_id'});
