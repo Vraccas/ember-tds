@@ -7,7 +7,10 @@ export default Route.extend({
   model() {
     return RSVP.hash({
       models: getOwner(this).lookup('data-adapter:main').getModelTypes().map(type => {
-        return {name: type.name,objects:this.get('store').findAll(type.name)};
+        return {
+          name: type.name,
+          objects:this.get('store').findAll(type.name),
+        };
       }),
       icons: ['user','table','step forward','address card outline','tag','tasks']
     });
