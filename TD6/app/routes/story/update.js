@@ -8,6 +8,9 @@ export default Route.extend({
       story: this.get('store').findRecord('story',params.story_id),
       project: this.get('store').findRecord('project',params.project_id),
       developers: this.get('store').findAll('developer'),
+      idDeveloper:[],
+      idTags:[],
+      tags: this.get('store').findAll('tag'),
     });
   },
   afterModel(model){
