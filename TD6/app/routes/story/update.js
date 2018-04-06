@@ -7,6 +7,7 @@ export default Route.extend({
     return new RSVP.hash({
       story: this.get('store').findRecord('story',params.story_id),
       project: this.get('store').findRecord('project',params.project_id),
+      developers: this.get('store').findAll('developer'),
     });
   },
   afterModel(model){
@@ -18,6 +19,9 @@ export default Route.extend({
       let project=Ember.get(model,'project');
       Ember.set(story,'code',data.code);
       Ember.set(story,'description',data.description);
+      let idDeveloper = data.developer;
+      let dev = Ember.get(model, 'developers').find(dev => dev.id == idDeveloper);
+      story.set('developer', dev);
       let self=this;
       story.save().then(()=>{
         project.save().then(()=>{self.transitionTo("project",project);});
